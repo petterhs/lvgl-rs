@@ -21,19 +21,19 @@ fn main() {
         let conf_path = PathBuf::from(raw_path);
 
         if !conf_path.exists() {
-            panic!(format!(
+            panic!(
                 "Directory referenced by {} needs to exist",
                 CONFIG_NAME
-            ));
+            );
         }
         if !conf_path.is_dir() {
-            panic!(format!("{} needs to be a directory", CONFIG_NAME));
+            panic!("{} needs to be a directory", CONFIG_NAME);
         }
         if !conf_path.join("lv_conf.h").exists() {
-            panic!(format!(
+            panic!(
                 "Directory referenced by {} needs to contain a file called lv_conf.h",
                 CONFIG_NAME
-            ));
+            );
         }
 
         println!(
@@ -100,6 +100,7 @@ fn main() {
         .ctypes_prefix("cty")
         .clang_args(&cc_args)
         .clang_args(&additional_args)
+        .clang_arg("-I/usr/arm-none-eabi/include")
         .generate()
         .expect("Unable to generate bindings");
 
