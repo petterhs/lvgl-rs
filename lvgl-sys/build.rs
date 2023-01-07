@@ -124,6 +124,7 @@ fn main() {
         .ctypes_prefix("cty")
         .clang_args(&cc_args)
         .clang_args(&additional_args)
+        .clang_arg("-I/usr/arm-none-eabi/include")
         .generate()
         .expect("Unable to generate bindings");
 

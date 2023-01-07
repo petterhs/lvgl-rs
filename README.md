@@ -75,8 +75,8 @@ internal memory manager.
 
 ## Running the demo
 
-**Hint for macOS users**: Before you run the demos you need to make sure you have [libsdl](https://www.libsdl.org)
-installed on your machine. To install it, use HomeBrew:
+
+**Hint for macOS users**: Before you run the demos you need to make sure you have [libsdl](https://www.libsdl.org) installed on your machine. To install it, use HomeBrew:
 
 ```shell
 $ brew install sdl2
